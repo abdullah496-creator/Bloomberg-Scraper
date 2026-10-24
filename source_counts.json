@@ -1,0 +1,890 @@
+[
+  {
+    "source": "Reuters",
+    "count": 938
+  },
+  {
+    "source": "CNBC",
+    "count": 767
+  },
+  {
+    "source": "The New York Times",
+    "count": 514
+  },
+  {
+    "source": "BBC",
+    "count": 453
+  },
+  {
+    "source": "Al Jazeera",
+    "count": 391
+  },
+  {
+    "source": "WSJ",
+    "count": 364
+  },
+  {
+    "source": "The Guardian",
+    "count": 354
+  },
+  {
+    "source": "Bloomberg.com",
+    "count": 344
+  },
+  {
+    "source": "PBS",
+    "count": 258
+  },
+  {
+    "source": "CNN",
+    "count": 243
+  },
+  {
+    "source": "CBS News",
+    "count": 214
+  },
+  {
+    "source": "The Washington Post",
+    "count": 189
+  },
+  {
+    "source": "Fortune",
+    "count": 187
+  },
+  {
+    "source": "NPR",
+    "count": 181
+  },
+  {
+    "source": "NBC News",
+    "count": 164
+  },
+  {
+    "source": "South China Morning Post",
+    "count": 151
+  },
+  {
+    "source": "AP News",
+    "count": 146
+  },
+  {
+    "source": "The Conversation",
+    "count": 129
+  },
+  {
+    "source": "Business Insider",
+    "count": 128
+  },
+  {
+    "source": "Yahoo Finance",
+    "count": 117
+  },
+  {
+    "source": "Politico",
+    "count": 112
+  },
+  {
+    "source": "The Hill",
+    "count": 112
+  },
+  {
+    "source": "Axios",
+    "count": 98
+  },
+  {
+    "source": "Investopedia",
+    "count": 97
+  },
+  {
+    "source": "Mint",
+    "count": 94
+  },
+  {
+    "source": "CBC",
+    "count": 92
+  },
+  {
+    "source": "Forbes",
+    "count": 89
+  },
+  {
+    "source": "ABC News - Breaking News, Latest News and Videos",
+    "count": 88
+  },
+  {
+    "source": "dw.com",
+    "count": 87
+  },
+  {
+    "source": "marketplace.org",
+    "count": 86
+  },
+  {
+    "source": "USA Today",
+    "count": 82
+  },
+  {
+    "source": "Fox Business",
+    "count": 78
+  },
+  {
+    "source": "Morningstar",
+    "count": 77
+  },
+  {
+    "source": "BusinessWorld Online",
+    "count": 74
+  },
+  {
+    "source": "Bureau of Labor Statistics (.gov)",
+    "count": 72
+  },
+  {
+    "source": "Australian Broadcasting Corporation",
+    "count": 72
+  },
+  {
+    "source": "Barron's",
+    "count": 71
+  },
+  {
+    "source": "Time Magazine",
+    "count": 67
+  },
+  {
+    "source": "MarketWatch",
+    "count": 63
+  },
+  {
+    "source": "The Economic Times",
+    "count": 60
+  },
+  {
+    "source": "Atlantic Council",
+    "count": 60
+  },
+  {
+    "source": "AFR",
+    "count": 57
+  },
+  {
+    "source": "Los Angeles Times",
+    "count": 57
+  },
+  {
+    "source": "markets.businessinsider.com",
+    "count": 52
+  },
+  {
+    "source": "Brookings",
+    "count": 51
+  },
+  {
+    "source": "Newsweek",
+    "count": 50
+  },
+  {
+    "source": "The Economist",
+    "count": 50
+  },
+  {
+    "source": "KITCO",
+    "count": 50
+  },
+  {
+    "source": "Council on Foreign Relations",
+    "count": 49
+  },
+  {
+    "source": "The Straits Times",
+    "count": 47
+  },
+  {
+    "source": "Anadolu Ajansı",
+    "count": 46
+  },
+  {
+    "source": "The Times of India",
+    "count": 44
+  },
+  {
+    "source": "Federal Reserve Bank of St. Louis",
+    "count": 44
+  },
+  {
+    "source": "Global News",
+    "count": 44
+  },
+  {
+    "source": "Moneycontrol.com",
+    "count": 43
+  },
+  {
+    "source": "France 24",
+    "count": 43
+  },
+  {
+    "source": "New York Post",
+    "count": 41
+  },
+  {
+    "source": "The World Economic Forum",
+    "count": 41
+  },
+  {
+    "source": "U.S. Department of Labor (.gov)",
+    "count": 41
+  },
+  {
+    "source": "Crude Oil Prices Today | OilPrice.com",
+    "count": 38
+  },
+  {
+    "source": "qz.com",
+    "count": 38
+  },
+  {
+    "source": "Kiplinger",
+    "count": 37
+  },
+  {
+    "source": "TradingView",
+    "count": 37
+  },
+  {
+    "source": "money.com",
+    "count": 35
+  },
+  {
+    "source": "vox.com",
+    "count": 33
+  },
+  {
+    "source": "Wolf Street",
+    "count": 33
+  },
+  {
+    "source": "VOA - Voice of America English News",
+    "count": 32
+  },
+  {
+    "source": "Financial Times",
+    "count": 32
+  },
+  {
+    "source": "Center for American Progress",
+    "count": 31
+  },
+  {
+    "source": "Kansas City Fed",
+    "count": 31
+  },
+  {
+    "source": "Business Standard",
+    "count": 30
+  },
+  {
+    "source": "The Globe and Mail",
+    "count": 30
+  },
+  {
+    "source": "Equitable Growth",
+    "count": 29
+  },
+  {
+    "source": "Nature",
+    "count": 29
+  },
+  {
+    "source": "Bankrate",
+    "count": 29
+  },
+  {
+    "source": "Fox News",
+    "count": 28
+  },
+  {
+    "source": "The Diplomat – Asia-Pacific",
+    "count": 28
+  },
+  {
+    "source": "Sky News",
+    "count": 27
+  },
+  {
+    "source": "Liberty Street Economics",
+    "count": 27
+  },
+  {
+    "source": "Peterson Institute for International Economics",
+    "count": 27
+  },
+  {
+    "source": "ING THINK economic and financial analysis | ING THINK",
+    "count": 27
+  },
+  {
+    "source": "Federal Reserve Bank of Dallas",
+    "count": 26
+  },
+  {
+    "source": "Cato Institute",
+    "count": 26
+  },
+  {
+    "source": "CoinDesk",
+    "count": 26
+  },
+  {
+    "source": "Middle East Eye",
+    "count": 26
+  },
+  {
+    "source": "Federal Reserve (.gov)",
+    "count": 25
+  },
+  {
+    "source": "U.S. News & World Report",
+    "count": 25
+  },
+  {
+    "source": "The Hindu",
+    "count": 25
+  },
+  {
+    "source": "The Indian Express",
+    "count": 25
+  },
+  {
+    "source": "Yahoo Finance UK",
+    "count": 25
+  },
+  {
+    "source": "The Real Economy Blog",
+    "count": 24
+  },
+  {
+    "source": "Economic Policy Institute",
+    "count": 24
+  },
+  {
+    "source": "American Enterprise Institute - AEI",
+    "count": 24
+  },
+  {
+    "source": "SMH.com.au",
+    "count": 24
+  },
+  {
+    "source": "CNA",
+    "count": 24
+  },
+  {
+    "source": "Philippine News Agency",
+    "count": 23
+  },
+  {
+    "source": "Euronews",
+    "count": 23
+  },
+  {
+    "source": "Statista",
+    "count": 22
+  },
+  {
+    "source": "politico.eu",
+    "count": 22
+  },
+  {
+    "source": "Chatham House",
+    "count": 22
+  },
+  {
+    "source": "Foreign Policy",
+    "count": 22
+  },
+  {
+    "source": "The New Yorker",
+    "count": 21
+  },
+  {
+    "source": "Pew Research Center",
+    "count": 21
+  },
+  {
+    "source": "Business Today",
+    "count": 21
+  },
+  {
+    "source": "Realtor.com",
+    "count": 21
+  },
+  {
+    "source": "Le Monde.fr",
+    "count": 21
+  },
+  {
+    "source": "financialexpress.com",
+    "count": 20
+  },
+  {
+    "source": "Census.gov",
+    "count": 20
+  },
+  {
+    "source": "The Japan Times",
+    "count": 20
+  },
+  {
+    "source": "Northeastern Global News",
+    "count": 20
+  },
+  {
+    "source": "CTV News",
+    "count": 20
+  },
+  {
+    "source": "Carnegie Endowment for International Peace",
+    "count": 20
+  },
+  {
+    "source": "Financial Post",
+    "count": 20
+  },
+  {
+    "source": "Seeking Alpha",
+    "count": 20
+  },
+  {
+    "source": "The Week",
+    "count": 19
+  },
+  {
+    "source": "Inquirer.net",
+    "count": 19
+  },
+  {
+    "source": "Deloitte",
+    "count": 19
+  },
+  {
+    "source": "GOV.UK",
+    "count": 19
+  },
+  {
+    "source": "CNBC TV18",
+    "count": 19
+  },
+  {
+    "source": "CSIS | Center for Strategic and International Studies",
+    "count": 19
+  },
+  {
+    "source": "The Atlantic",
+    "count": 19
+  },
+  {
+    "source": "ABC7 Bay Area",
+    "count": 19
+  },
+  {
+    "source": "mpamag.com",
+    "count": 19
+  },
+  {
+    "source": "News.com.au",
+    "count": 19
+  },
+  {
+    "source": "Indeed Hiring Lab",
+    "count": 19
+  },
+  {
+    "source": "Macau Business",
+    "count": 18
+  },
+  {
+    "source": "NDTV Profit",
+    "count": 18
+  },
+  {
+    "source": "Cayman Compass",
+    "count": 18
+  },
+  {
+    "source": "CEPR",
+    "count": 18
+  },
+  {
+    "source": "India Today",
+    "count": 18
+  },
+  {
+    "source": "The Business Journals",
+    "count": 18
+  },
+  {
+    "source": "The Jerusalem Post",
+    "count": 18
+  },
+  {
+    "source": "J.P. Morgan",
+    "count": 18
+  },
+  {
+    "source": "KCRA",
+    "count": 18
+  },
+  {
+    "source": "Investing.com",
+    "count": 18
+  },
+  {
+    "source": "Reserve Bank of Australia",
+    "count": 17
+  },
+  {
+    "source": "Schroders",
+    "count": 17
+  },
+  {
+    "source": "The Independent",
+    "count": 17
+  },
+  {
+    "source": "Economic Research Service (.gov)",
+    "count": 16
+  },
+  {
+    "source": "Eye On Housing",
+    "count": 16
+  },
+  {
+    "source": "FOREX.com",
+    "count": 16
+  },
+  {
+    "source": "FXStreet",
+    "count": 16
+  },
+  {
+    "source": "China-US Focus",
+    "count": 16
+  },
+  {
+    "source": "McKinsey & Company",
+    "count": 15
+  },
+  {
+    "source": "Dawn",
+    "count": 15
+  },
+  {
+    "source": "This is Money",
+    "count": 15
+  },
+  {
+    "source": "ABN AMRO",
+    "count": 15
+  },
+  {
+    "source": "The Edge Malaysia",
+    "count": 15
+  },
+  {
+    "source": "Visual Capitalist",
+    "count": 15
+  },
+  {
+    "source": "Oxford Economics",
+    "count": 15
+  },
+  {
+    "source": "The Business Times",
+    "count": 14
+  },
+  {
+    "source": "U.S. Department of War (.gov)",
+    "count": 14
+  },
+  {
+    "source": "FactCheck.org",
+    "count": 14
+  },
+  {
+    "source": "Zee Business",
+    "count": 14
+  },
+  {
+    "source": "Investment Week",
+    "count": 14
+  },
+  {
+    "source": "MacroMicro",
+    "count": 14
+  },
+  {
+    "source": "E&E News by POLITICO",
+    "count": 14
+  },
+  {
+    "source": "Arab News",
+    "count": 14
+  },
+  {
+    "source": "WHYY",
+    "count": 14
+  },
+  {
+    "source": "Federal Reserve Bank of Minneapolis",
+    "count": 14
+  },
+  {
+    "source": "Investor's Business Daily",
+    "count": 14
+  },
+  {
+    "source": "NDTV",
+    "count": 14
+  },
+  {
+    "source": "RNZ",
+    "count": 13
+  },
+  {
+    "source": "The Express Tribune",
+    "count": 13
+  },
+  {
+    "source": "National Desk",
+    "count": 13
+  },
+  {
+    "source": "PYMNTS.com",
+    "count": 13
+  },
+  {
+    "source": "Institute for the Study of War",
+    "count": 13
+  },
+  {
+    "source": "NewsNation",
+    "count": 13
+  },
+  {
+    "source": "The Telegraph",
+    "count": 12
+  },
+  {
+    "source": "Oregon Public Broadcasting - OPB",
+    "count": 12
+  },
+  {
+    "source": "UN News",
+    "count": 12
+  },
+  {
+    "source": "Times of Malta",
+    "count": 12
+  },
+  {
+    "source": "realestate.com.au",
+    "count": 12
+  },
+  {
+    "source": "Philadelphia Federal Reserve Bank",
+    "count": 12
+  },
+  {
+    "source": "NBC Los Angeles",
+    "count": 12
+  },
+  {
+    "source": "A Wealth of Common Sense",
+    "count": 12
+  },
+  {
+    "source": "Courthouse News",
+    "count": 12
+  },
+  {
+    "source": "WBAL-TV",
+    "count": 12
+  },
+  {
+    "source": "Business Tech",
+    "count": 12
+  },
+  {
+    "source": "Business Recorder",
+    "count": 12
+  },
+  {
+    "source": "Hindustan Times",
+    "count": 12
+  },
+  {
+    "source": "InvestmentNews",
+    "count": 12
+  },
+  {
+    "source": "Asia Times",
+    "count": 12
+  },
+  {
+    "source": "Binance",
+    "count": 12
+  },
+  {
+    "source": "TradingKey",
+    "count": 12
+  },
+  {
+    "source": "Discovery Alert",
+    "count": 12
+  },
+  {
+    "source": "The Hans India",
+    "count": 11
+  },
+  {
+    "source": "ETF.com",
+    "count": 11
+  },
+  {
+    "source": "NBC 5 Chicago",
+    "count": 11
+  },
+  {
+    "source": "Money Saving Expert",
+    "count": 11
+  },
+  {
+    "source": "Euractiv",
+    "count": 11
+  },
+  {
+    "source": "Responsible Statecraft",
+    "count": 11
+  },
+  {
+    "source": "Radio Free Europe/Radio Liberty",
+    "count": 11
+  },
+  {
+    "source": "White & Case LLP",
+    "count": 11
+  },
+  {
+    "source": "ABC7 Chicago",
+    "count": 11
+  },
+  {
+    "source": "thestreet.com",
+    "count": 11
+  },
+  {
+    "source": "HousingWire",
+    "count": 11
+  },
+  {
+    "source": "Gulf News",
+    "count": 11
+  },
+  {
+    "source": "The Australian",
+    "count": 11
+  },
+  {
+    "source": "FXEmpire",
+    "count": 11
+  },
+  {
+    "source": "BNN Bloomberg",
+    "count": 11
+  },
+  {
+    "source": "Econbrowser",
+    "count": 10
+  },
+  {
+    "source": "CalMatters",
+    "count": 10
+  },
+  {
+    "source": "U.S. Chamber of Commerce",
+    "count": 10
+  },
+  {
+    "source": "Bangkok Post",
+    "count": 10
+  },
+  {
+    "source": "Business News Nigeria",
+    "count": 10
+  },
+  {
+    "source": "European Central Bank",
+    "count": 10
+  },
+  {
+    "source": "The Sun",
+    "count": 10
+  },
+  {
+    "source": "Orange County Register",
+    "count": 10
+  },
+  {
+    "source": "ReliefWeb",
+    "count": 10
+  },
+  {
+    "source": "House.gov",
+    "count": 10
+  },
+  {
+    "source": "Harvard Kennedy School",
+    "count": 10
+  },
+  {
+    "source": "WPR",
+    "count": 10
+  },
+  {
+    "source": "National Mortgage Professional",
+    "count": 10
+  },
+  {
+    "source": "Federal Reserve Bank of San Francisco",
+    "count": 10
+  },
+  {
+    "source": "equiti.com",
+    "count": 10
+  },
+  {
+    "source": "VT Markets",
+    "count": 10
+  },
+  {
+    "source": "rbc.com",
+    "count": 10
+  },
+  {
+    "source": "Semafor",
+    "count": 10
+  },
+  {
+    "source": "The Times of Israel",
+    "count": 10
+  },
+  {
+    "source": "ABC7 New York",
+    "count": 10
+  },
+  {
+    "source": "The New Republic",
+    "count": 10
+  }
+]
