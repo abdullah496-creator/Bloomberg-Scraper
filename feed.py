@@ -1,18 +1,17 @@
 
-  
 
 
 import time
-import feedparser                # Parses RSS/Atom feeds
-import json                      # Reading / writing JSON
-import os                        # File existence checks
-import re                        # Regex for date parsing
-import random                    # Random delays for browser simulation
-import threading                 # Locks for thread‑safe access
-import asyncio                   # Async I/O for nodriver browser
-import sys                       # Clean exit
-from datetime import datetime
-from zoneinfo import ZoneInfo    # Timezone support (Python 3.9+)
+import feedparser                
+import json                      
+import os                        
+import re                        
+import random                    
+import threading                 
+import asyncio                   
+import sys                       
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 from typing import List, Dict, Optional
 from urllib.parse import quote, urlparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -23,11 +22,12 @@ from bs4 import BeautifulSoup    # HTML parsing
 # -----------------------------------------------------------------------------
 #  CONFIGURATION – Phase 1 (RSS)
 # -----------------------------------------------------------------------------
-AFTER_DATE = "2024-12-01"
-BEFORE_DATE = "2026-02-16"
-ARTICLES_PER_SOURCE = 1000         # max articles to fetch per source
-MAX_SOURCES = 15                  # max number of sources to process
-RSS_WORKERS = 70                  # parallel threads for RSS fetching
+AFTER_DATE = "2010-12-01"
+BEFORE_DATE = "2026-09-16"
+ARTICLES_PER_SOURCE = 500         # max articles to fetch per source
+MAX_SOURCES = 200                 # max number of sources to process
+RSS_WORKERS = 10                  # parallel threads for RSS fetching
+RSS_MAX_BATCH = 100               # Google News RSS result cap per date-range query
 SOURCES_FILE = "source_counts.json"
 RSS_OUTPUT_FILE = "google_news_articles.json"
 RSS_SAVE_INTERVAL = 10            # save progress every N sources
@@ -94,31 +94,54 @@ def build_google_news_rss_url(query: str, after_date: str, before_date: str,
     return f"https://news.google.com/rss/search?q={encoded_query}&hl={language}-{country}&gl={country}&ceid={country}:{language}"
 
 def fetch_articles_for_source(query: str, after_date: str, before_date: str,
-                              limit: int = 100) -> List[Dict[str, str]]:
+                              limit: int = 500) -> List[Dict[str, str]]:
     """
-    Fetch up to `limit` articles for a single query from Google News RSS.
+    Fetch up to `limit` unique articles, splitting saturated date ranges as needed.
     Returns a list of dicts with keys: title, link, published, source, query.
     """
-    feed_url = build_google_news_rss_url(query, after_date, before_date)
-    try:
-        feed = feedparser.parse(feed_url)
-    except Exception as e:
-        print(f"  Error parsing feed for '{query}': {e}")
-        return []
-
     articles = []
-    for entry in feed.entries:
-        source = entry.get('source', {}).get('title', query) or query
-        published = entry.get('published', '')
-        articles.append({
-            'title': entry.get('title', ''),
-            'link': entry.get('link', ''),
-            'published': published,
-            'source': source,
-            'query': query
-        })
+    seen = set()
+
+    def fetch_date_range(range_start: str, range_end: str):
         if len(articles) >= limit:
-            break
+            return
+
+        feed_url = build_google_news_rss_url(query, range_start, range_end)
+        try:
+            feed = feedparser.parse(feed_url)
+        except Exception as e:
+            print(f"  Error parsing feed for '{query}' ({range_start} to {range_end}): {e}")
+            return
+
+        entries = feed.entries
+        for entry in entries:
+            source = entry.get('source', {}).get('title', query) or query
+            published = entry.get('published', '')
+            link = entry.get('link', '')
+            article_key = link or (entry.get('title', ''), published, source)
+            if article_key in seen:
+                continue
+            seen.add(article_key)
+            articles.append({
+                'title': entry.get('title', ''),
+                'link': link,
+                'published': published,
+                'source': source,
+                'query': query
+            })
+            if len(articles) >= limit:
+                return
+
+        if len(entries) >= RSS_MAX_BATCH:
+            start = datetime.strptime(range_start, "%Y-%m-%d").date()
+            end = datetime.strptime(range_end, "%Y-%m-%d").date()
+            days = (end - start).days
+            if days > 1:
+                middle = start + timedelta(days=days // 2)
+                fetch_date_range(range_start, middle.isoformat())
+                fetch_date_range(middle.isoformat(), range_end)
+
+    fetch_date_range(after_date, before_date)
     return articles
 
 def save_rss_data(results: Dict, total_articles: int, sources_processed: int,
@@ -138,7 +161,7 @@ def save_rss_data(results: Dict, total_articles: int, sources_processed: int,
 
 def scrape_google_news(
         sources: List[str], after_date: str, before_date: str,
-        articles_per_source: int = 100, max_sources: int = 100,
+        articles_per_source: int = 500, max_sources: int = 200,
         output_file: str = "google_news_articles.json",
         save_interval: int = 10,
         workers: int = 20,
@@ -170,8 +193,14 @@ def scrape_google_news(
                 old_data = json.load(f)
                 if 'articles' in old_data:
                     existing_results = old_data['articles']
-                    processed_sources = set(existing_results.keys())
-                    print(f"✅ Resuming RSS: found {len(existing_results)} sources already in {output_file}")
+                    processed_sources = {
+                        source for source, articles in existing_results.items()
+                        if len(articles) >= articles_per_source
+                    }
+                    print(
+                        f"✅ Resuming RSS: found {len(existing_results)} sources in {output_file}; "
+                        f"{len(processed_sources)} already meet the {articles_per_source}-article target"
+                    )
         except Exception as e:
             print(f"⚠️ Could not load existing data: {e}")
 
@@ -204,9 +233,11 @@ def scrape_google_news(
             query, articles = future.result()
             with lock:
                 if articles:
+                    previous_count = len(results.get(query, []))
                     results[query] = articles
-                    sources_processed += 1
-                    total_articles += len(articles)
+                    if previous_count == 0:
+                        sources_processed += 1
+                    total_articles += len(articles) - previous_count
                     print(f"  ✅ Found {len(articles)} articles for '{query}'")
                 else:
                     print(f"  ⚠️ No articles for '{query}'")

@@ -38,7 +38,7 @@ python -m pip install --upgrade pip
 Install the dependencies:
 
 ```powershell
-python -m pip install feedparser requests beautifulsoup4 lxml googlenewsdecoder nodriver playwright
+pip install -r requirements.txt
 ```
 
 If PowerShell blocks virtual-environment activation, activate it from Command
@@ -48,10 +48,40 @@ Prompt instead:
 .venv\Scripts\activate.bat
 ```
 
-## Run
+### Environment & Database Configuration
+
+Copy the sample environment file to `.env` and fill in your credentials:
 
 ```powershell
+cp .env.example .env
+```
+
+Edit `.env` to configure your PostgreSQL connection:
+```env
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=postgres
+DB_PASSWORD=your_secure_password_here
+DB_NAME=news_db
+```
+
+> **Security Note:** The `.env` file is excluded in `.gitignore` so your actual credentials are never committed.
+
+## Run
+
+Run the scraper:
+```powershell
 python feed.py
+```
+
+Import articles into PostgreSQL:
+```powershell
+python import_to_postgres.py
+```
+
+View and verify imported articles:
+```powershell
+python check_db.py
 ```
 
 The script runs all three stages sequentially. It reads `source_counts.json` for
